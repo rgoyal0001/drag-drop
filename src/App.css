@@ -1,38 +1,224 @@
+/* *{
+  color: white;
+}
+button{
+  border: 1px solid white;
+  cursor: pointer;
+} */
+
 .App {
+    display: flex;
+    align-items: center;
+}
+
+.Items {
+  height: min-content;
+  width: 97vw;
+  /* border: 1px solid red; */
+
+}
+
+.Items-columns-container {
+  min-height: min-content;
+  height: 100%;
+  /* border: 1px solid red; */
+  margin: 2rem 0;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: stretch;
+}
+
+.ItemsColumn {
+  width: 20%;
   text-align: center;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: stretch;
+  /* background-color: white; */
+  /* color: red; */
+  /* border: 1px solid red; */
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+.ex{
+  width: 100%;
+  height: 100%;
+  padding: 10px 3px;
+  color: white;
+  text-align: center;
+  /* border: 1px solid red; */
+
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.ItemsColumns-tasks-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  /* height: 100%; */
+  flex-grow: 1;
+  /* border: 1px solid red; */
+
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.ItemsColumn-name {
+  /* color: white; */
+  font-size: 1rem;
+  margin-top: 1rem;
+  
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+
+
+
+.ItemsColumn-btn-add {
+  /* background-color: white; */
+  opacity: 0.8;
+  padding: 0.4rem;
+  border: 1px solid white;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.ItemsColumn-btn-add:hover {
+  opacity: 1;
+}
+
+.ItemsEditForm {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  border: 1px solid red; 
+
+}
+.ItemsEditForm-input-container{
+  width: 95%;
+  padding: 1.2rem;
+}
+.ItemsEditForm-input {
+  width: 96%;
+  margin: auto;
+
+}
+
+
+.ItemsEditForm-btn {
+  font-size: 0.7rem;
+  opacity: 0.8;
+  padding: 0.2rem 0.4rem;
+  border: 1px solid white;
+  border-radius: 10px;
+  cursor: pointer;
+  margin: 5px 0;
+}
+
+.ItemsModal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: 9;
+}
+
+.ItemsModal-content {
+  position: fixed;
+  /* border: 1px solid red;  */
+  background: white;
+  border-radius: 10px;
+  width: 15%;
+  min-width: min-content;
+  height: 30%;
+  min-height: min-content;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 99;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.ItemsModal-close-btn:before {
+  content: "x";
+  color: black;
+  font-weight: 300;
+  font-family: Arial, sans-serif;
+  position: absolute;
+  right: 20px;
+  top: 10px;
+  cursor: pointer;
+}
+
+.ItemsModal-form {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  width: 220px;
+  height: 200px;
+}
+
+.ItemsModal-input-container {
+  margin: 10px 0;
+}
+
+.ItemsModal-input {
+  width: 200px;
+}
+
+.ItemsModal-input-submit-btn {
+  background-color: lightsteelblue;
+  opacity: 0.8;
+  width: 100px;
+  padding: 0.3rem;
+  border: 1px solid white;
+  border-radius: 10px;
+  cursor: pointer;
+  justify-self: center;
+}
+
+.ItemsTask {
+  /* margin: 1rem 0; */
+  padding: 10px;
+  /* height: min-content; */
+  min-width: 150px;
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-evenly;
+  /* border-radius: 8px; */
+  opacity: 0.9;
+  text-align: left;
+  
+}
+
+.ItemsTask-content {
+  padding: 1rem 0;
+  font-size: 1rem;
+  /* border: 1px solid red;  */
+}
+
+.ItemsTask-options {
+  font-size: 0.8rem;
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+}
+
+.ItemsTask-btn-edit,
+.ItemsTask-btn-delete {
+  font-size: 0.7rem;
+  opacity: 0.8;
+  padding: 0.2rem 0.4rem;
+  border: 1px solid white;
+  border-radius: 10px;
+  cursor: pointer;
   color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
 }
